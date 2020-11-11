@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <title>Burger Menu Page</title>
+        <link type="text/css" rel="stylesheet" href="restaurant.css">
+        <script>
+            function openMenu(event, tabID, menuID){
+                let i, menuTab, menuItems;
+
+                menuItems = document.getElementsByClassName("cards");
+                menuTab = document.getElementsByClassName("menu-tab");
+                for(i=0; i< menuItems.length; i++){
+                    if(tabID != "all"){
+                        menuItems[i].style.display = "none"; 
+                    }
+                    else{
+                        menuItems[i].style.display = "block"; 
+                    }
+                    menuTab[i].className = menuTab[i].className.replace(" selected", "");
+                }
+                document.getElementById(menuID).style.display = "block";
+                document.getElementById(tabID).className = "menu-tab selected";
+            }
+        </script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <span>
+                <a href><i class="material-icons">location_on</i> Your Location</a>
+            </span>
+            <div class="header-icons">
+                <a href="#"><i class="material-icons">shopping_cart</i></a>
+                <a href="#"><i class="material-icons">account_box</i></a>
+            </div>
+        </header>
+
+        <div class="wallpaper" style="background-repeat: no-repeat; background-size: cover; background-blend-mode: darken; background-image: url('hamburger.jpg'); background-position: center; height: 20em;">
+          <h1>Burger King</h1> 
+        </div>
+
+        <div class="content">
+            <div class="leftsidebar">
+                <nav>
+                    <h2 class="menu-tab selected" id="all"><a href="javascript: void(0)" onclick="openMenu(event, 'all', 'all');">All Items</a></h2> 
+
+                    <h2 class="menu-tab" id="hot-drinks"><a href="javascript: void(0)" onclick="openMenu(event, 'hot-drinks', 'hot-drinks-menu');">Hot Drinks</a></h2>
+                    <ul>
+                        <li>Latte</li>
+                        <li>Hot cappuccino</li>
+                    </ul>
+                    <h2 class="menu-tab" id="breakfast"><a href="javascript: void(0)" onclick="openMenu(event, 'breakfast', 'breakfast-menu');">Breakfast Menu</a></h2>
+                    <ul>
+                        <li>Green salad</li>
+                        <li>Veggie wrap</li>
+                    </ul> 
+                    <h2 class="menu-tab" id="lunch"><a href="javascript: void(0)" onclick="openMenu(event, 'lunch', 'lunch-menu');">Lunch Menu</a></h2> 
+                    <ul>
+                        <li>Hamburger</li>
+                        <li>Cheeseburger</li>
+                    </ul> 
+                    <h2 class="menu-tab" id="dinner"><a href="javascript: void(0)" onclick="openMenu(event, 'dinner', 'dinner-menu');">Dinner Menu</a></h2>
+                    <ul>
+                        <li>King chicken</li>
+                        <li>Chicken burger</li>
+                    </ul> 
+                </nav>
+            </div>
+
+            <div class="rightsidebar">
+                <div class="cards" id="hot-drinks-menu">
+                    <h2>Hot Drinks</h2>
+                    <div class="card " id="hot-choco">
+                        <div class="item-picture" style="background-image: url('Café-Latte-Recipe.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Latte</h2>
+                            <p>Made with espresso and hot steamed milk.</p>
+                            <div id="price">
+                                $5.55
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="coffee">
+                        <div class="item-picture" style="background-image: url('coffee_cappuccino.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Hot Cappuccino</h2>
+                            <p>Espresso-based coffee, traditionally prepared with steamed milk foam.</p>
+                            <div id="price">
+                                $8.99
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards" id="breakfast-menu">
+                    <h2>Breakfast Menu</h2>
+                    <div class="card " id="salad">
+                        <div class="item-picture" style="background-image: url('green-tuna-salad-1280x720.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Green Salad</h2>
+                            <p>A classy spinach salad full of texture and flavor contrast.</p>
+                            <div id="price">
+                                $10.50
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="sandwich">
+                        <div class="item-picture" style="background-image: url('veggiewrap.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Veggie Wrap</h2>
+                            <p>With smokey black bean and roasted sweet potatoes.</p>
+                            <div id="price">
+                                $13.50
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards" id="lunch-menu">
+                    <h2>Lunch Items</h2>
+                    <div class="card " id="pep-pizza">
+                        <div class="item-picture" style="background-image: url('hamburger.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Hamburger</h2>
+                            <p>Served with cheese, lettuce, tomato and onion.</p>
+                            <div id="price">
+                                $12
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="cheese-pizza">
+                        <div class="item-picture" style="background-image: url('green-cheeseburger.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Cheeseburger</h2>
+                            <p>Seerved with pickles, bacon and mayonnaise.</p>
+                            <div id="price">
+                                $15
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards" id="dinner-menu">
+                    <h2>Dinner Menu</h2>
+                    <div class="card " id="sweet-fries">
+                        <div class="item-picture" style="background-image: url('king_chicken.png'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>King Chicken</h2>
+                            <p>Served with sweet and potato fries.</p>
+                            <div id="price">
+                                $16.50
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="chicken">
+                        <div class="item-picture" style="background-image: url('chickenBurger.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Chicken Burger</h2>
+                            <p>Served with chicken wings, chicken breast and chicken tighs.</p>
+                            <div id="price">
+                                $17.99
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
