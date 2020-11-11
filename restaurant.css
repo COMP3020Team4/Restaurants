@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&display=swap');
+
+html, body{
+    height:100%;
+    width:100%;
+    color:white;
+    background-color:black;
+    font-family: 'Lato', sans-serif;
+}
+
+header{
+    padding:1%;
+}
+
+span a{
+    color:white;
+    text-decoration: none;
+}
+
+span a:hover{
+    opacity:50%;
+    transition: 0.4s;
+}
+
+.header-icons{
+    float:right;
+}
+
+.content{
+    display:grid;
+    grid-template-columns: 20% 80%;
+}
+
+.leftsidebar{
+    color:black;
+    background-color: whitesmoke;
+    padding-left:10%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.leftsidebar a{
+    color:black;
+    text-decoration: none;
+}
+
+.leftsidebar a:hover{
+    color:green;
+    transition: 0.4s;
+}
+
+.selected{
+    background-color:lightgrey;
+    transition:0.4s;
+}
+
+.menu-tab{
+    padding-left: 2%;
+}
+
+.cards{
+    display:block;
+}
+
+.rightsidebar{
+    padding-left:3%;
+}
+
+.card{
+    margin: 3%;
+    color:gainsboro;
+    background-color: crimson;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: thin;
+    display:grid;
+    grid-template-columns: 30% 70%;
+}
+
+.item-info{
+    padding-left:3%;
+}
+
+.item-info h2{
+    color:whitesmoke;
+}
+
+p{
+    font-style: italic;
+}
+
+#price{
+    float: left;
+}
+
+#quantity{
+    float: right;
+    margin-right:2%;
+    margin-bottom:2%;
+}
+
+.item-info button{
+    font-weight: 900;
+}
+
+.item-info button:hover{
+    color:gainsboro;
+    cursor: pointer;
+    background-color: black;
+    transition:0.4s;
+}
+
+.material-icons{
+    color:white;
+}
+
+.material-icons:hover{
+    opacity: 50%;
+    transition:0.4s;
+}

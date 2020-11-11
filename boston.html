@@ -1,0 +1,215 @@
+<html>
+    <head>
+        <title></title>
+        <link type="text/css" rel="stylesheet" href="restaurant.css">
+        <script>
+            function openMenu(event, tabID, menuID){
+                let i, menuTab, menuItems;
+
+                menuItems = document.getElementsByClassName("cards");
+                menuTab = document.getElementsByClassName("menu-tab");
+                for(i=0; i< menuItems.length; i++){
+                    if(tabID != "all"){
+                        menuItems[i].style.display = "none"; 
+                    }
+                    else{
+                        menuItems[i].style.display = "block"; 
+                    }
+                    menuTab[i].className = menuTab[i].className.replace(" selected", "");
+                }
+                document.getElementById(menuID).style.display = "block";
+                document.getElementById(tabID).className = "menu-tab selected";
+            }
+        </script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <span>
+                <a href><i class="material-icons">location_on</i> Your Location</a>
+            </span>
+            <div class="header-icons">
+                <a href="#"><i class="material-icons">shopping_cart</i></a>
+                <a href="#"><i class="material-icons">account_box</i></a>
+            </div>
+        </header>
+
+        <div class="wallpaper" style="background-repeat: no-repeat; background-size: cover; background-image: url('boston-pizza.jpg'); background-position: center; height: 20em;">
+            <!-- <h1>Boston Pizza</h1> -->
+        </div>
+
+        <div class="content">
+            <div class="leftsidebar">
+                <nav>
+                    <h2 class="menu-tab selected" id="all"><a href="javascript: void(0)" onclick="openMenu(event, 'all', 'all');">All Items</a></h2> 
+
+                    <h2 class="menu-tab" id="hot-drinks"><a href="javascript: void(0)" onclick="openMenu(event, 'hot-drinks', 'hot-drinks-menu');">Hot Drinks</a></h2>
+                    <ul>
+                        <li>Tea</li>
+                        <li>Coffee</li>
+                        <li>Hot chocolate</li>
+                    </ul>
+                    <h2 class="menu-tab" id="breakfast"><a href="javascript: void(0)" onclick="openMenu(event, 'breakfast', 'breakfast-menu');">Breakfast Menu</a></h2>
+                    <ul>
+                        <li>Salads</li>
+                        <li>Sandwiches</li>
+                    </ul> 
+                    <h2 class="menu-tab" id="lunch"><a href="javascript: void(0)" onclick="openMenu(event, 'lunch', 'lunch-menu');">Lunch Menu</a></h2> 
+                    <ul>
+                        <li>Pizza</li>
+                        <li>Burger</li>
+                    </ul> 
+                    <h2 class="menu-tab" id="dinner"><a href="javascript: void(0)" onclick="openMenu(event, 'dinner', 'dinner-menu');">Dinner Menu</a></h2>
+                    <ul>
+                        <li>Fries</li>
+                        <li>Chicken</li>
+                    </ul> 
+                </nav>
+            </div>
+
+            <div class="rightsidebar">
+                <div class="cards" id="hot-drinks-menu">
+                    <h2>Hot Drinks</h2>
+                    <div class="card " id="pep-pizza">
+                        <div class="item-picture" style="background-image: url('pepperoni-pizza.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Pepperoni Pizza</h2>
+                            <p>New York style pepperoni and mozzarella cheese.</p>
+                            <div id="price">
+                                $12
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="cheese-pizza">
+                        <div class="item-picture" style="background-image: url('cheese-pizza.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Cheese Pizza</h2>
+                            <p>Mmm</p>
+                            <div id="price">
+                                $12
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards" id="breakfast-menu">
+                    <h2>Breakfast Menu</h2>
+                    <div class="card " id="pep-pizza">
+                        <div class="item-picture" style="background-image: url('pepperoni-pizza.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Pepperoni Pizza</h2>
+                            <p>New York style pepperoni and mozzarella cheese.</p>
+                            <div id="price">
+                                $12
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="cheese-pizza">
+                        <div class="item-picture" style="background-image: url('cheese-pizza.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Cheese Pizza</h2>
+                            <p>Mmm</p>
+                            <div id="price">
+                                $12
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards" id="lunch-menu">
+                    <h2>Lunch Items</h2>
+                    <div class="card " id="pep-pizza">
+                        <div class="item-picture" style="background-image: url('pepperoni-pizza.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Pepperoni Pizza</h2>
+                            <p>New York style pepperoni and mozzarella cheese.</p>
+                            <div id="price">
+                                $12
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="cheese-pizza">
+                        <div class="item-picture" style="background-image: url('cheese-pizza.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Cheese Pizza</h2>
+                            <p>Mmm</p>
+                            <div id="price">
+                                $12
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards" id="dinner-menu">
+                    <h2>Dinner Menu</h2>
+                    <div class="card " id="pep-pizza">
+                        <div class="item-picture" style="background-image: url('pepperoni-pizza.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Pepperoni Pizza</h2>
+                            <p>New York style pepperoni and mozzarella cheese.</p>
+                            <div id="price">
+                                $12
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="cheese-pizza">
+                        <div class="item-picture" style="background-image: url('cheese-pizza.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Cheese Pizza</h2>
+                            <p>Mmm</p>
+                            <div id="price">
+                                $12
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
