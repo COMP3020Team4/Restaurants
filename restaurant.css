@@ -12,6 +12,17 @@ header{
     padding:1%;
 }
 
+h1{
+    font-size: 900%;
+    color: white;
+    text-align: center;
+}
+
+.wallpaper{
+    display: grid;
+    align-items: center;
+}
+
 span a{
     color:white;
     text-decoration: none;
