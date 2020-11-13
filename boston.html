@@ -8,17 +8,23 @@
 
                 menuItems = document.getElementsByClassName("cards");
                 menuTab = document.getElementsByClassName("menu-tab");
+
                 for(i=0; i< menuItems.length; i++){
+
                     if(tabID != "all"){
                         menuItems[i].style.display = "none"; 
                     }
                     else{
                         menuItems[i].style.display = "block"; 
                     }
+                }
+
+                for(i=0; i<menuTab.length; i++){
                     menuTab[i].className = menuTab[i].className.replace(" selected", "");
                 }
+
                 document.getElementById(menuID).style.display = "block";
-                document.getElementById(tabID).className = "menu-tab selected";
+                //document.getElementById(tabID).className = "menu-tab selected";
             }
         </script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -140,7 +146,7 @@
                 </div>
 
                 <div class="cards" id="lunch-menu">
-                    <h2>Lunch Items</h2>
+                    <h2>Lunch Menu</h2>
                     <div class="card " id="pep-pizza">
                         <div class="item-picture" style="background-image: url('pepperoni-pizza.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
                         <div class="item-info">
